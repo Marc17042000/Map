@@ -1,0 +1,35 @@
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zürich Event Map</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css"/>
+</head>
+<body>
+  <header>
+    <h1>Zürich Event Map</h1>
+    <label><input type="checkbox" id="toggleKioske" checked /> Kioske anzeigen</label>
+  </header>
+  <main>
+    <div id="map"></div>
+    <aside class="open">
+      <h2>Filter</h2>
+      <label>Datum <input type="date" id="filterDate" /></label>
+      <label>Uhrzeit <input type="time" id="filterTime" /></label>
+      <label>Grösse
+        <select id="filterSize">
+          <option value="">Alle</option>
+          <option value="klein">Klein</option>
+          <option value="mittel">Mittel</option>
+          <option value="gross">Gross</option>
+        </select>
+      </label>
+    </aside>
+  </main>
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>

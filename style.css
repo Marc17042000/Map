@@ -1,0 +1,49 @@
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  font-family: sans-serif;
+}
+main {
+  display: flex;
+  height: 100vh;
+}
+#map {
+  flex: 1;
+}
+aside {
+  width: 280px;
+  background: #f0f0f0;
+  padding: 1rem;
+}
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: white;
+  padding: 0.5rem 1rem;
+  display: flex;
+  justify-content: space-between;
+  z-index: 1000;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+@media (max-width: 768px) {
+  aside {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 80%;
+    max-width: 300px;
+    height: calc(100vh - 60px);
+    overflow-y: auto;
+    background: white;
+    z-index: 1001;
+    transform: translateX(100%);
+    transition: transform .3s;
+  }
+  aside.open {
+    transform: translateX(0);
+  }
+}
